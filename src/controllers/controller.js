@@ -1,6 +1,6 @@
 
 const renderIndex = (req, res) => {
-
+    res.render('index');
 };
 
 const renderNewEntry = (req, res) => {
