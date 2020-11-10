@@ -17,5 +17,8 @@ app.use(express.urlencoded({extended: false}));
 app.use(require('./routes/routes'));
 
 // 404 handler
+app.use((req, res) => {
+    res.status(404).send("404 not found");
+});
 
 module.exports = app;
