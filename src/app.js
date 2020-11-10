@@ -10,7 +10,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // middlewares
+app.use(morgan('dev'));
+app.use(express.urlencoded({extended: false}));
 
 // routes
+
+// 404 handler
 
 module.exports = app;
