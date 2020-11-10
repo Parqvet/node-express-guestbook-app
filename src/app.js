@@ -18,7 +18,7 @@ app.use(require('./routes/routes'));
 
 // 404 handler
 app.use((req, res) => {
-    res.status(404).send("404 not found");
+    res.status(404).render('404');
 });
 
 module.exports = app;
