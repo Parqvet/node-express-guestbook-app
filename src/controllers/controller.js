@@ -1,7 +1,7 @@
 const entries = []; // esto simulara mi base de datos
 
 const renderIndex = (req, res) => {
-    res.render('index');
+    res.render('index', {entries});
 };
 
 const renderNewEntry = (req, res) => {
@@ -9,7 +9,7 @@ const renderNewEntry = (req, res) => {
 };
 
 const createNewEntry = (req, res) => {
-    // cada vez que venga un dato voy a guardarlo en un objeto
+    // cada vez que venga un dato desde el form voy a guardarlo en un objeto
     const newEntry = {
         title: req.body.title,
         content: req.body.body,
